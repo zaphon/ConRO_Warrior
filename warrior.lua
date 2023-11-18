@@ -127,7 +127,7 @@ function ConRO.Warrior.Under10(_, timeShift, currentSpell, gcd, tChosen, pvpChos
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -165,7 +165,7 @@ function ConRO.Warrior.Under10Def(_, timeShift, currentSpell, gcd, tChosen, pvpC
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -468,7 +468,7 @@ function ConRO.Warrior.ArmsDef(_, timeShift, currentSpell, gcd, tChosen)
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 	if _IgnorePain_RDY and _Rage >= _Rage_Max - 25 then
@@ -916,7 +916,7 @@ function ConRO.Warrior.ProtectionDef(_, timeShift, currentSpell, gcd, tChosen)
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 	if _SpellReflection_RDY and (ConRO:BossCast() or ConRO:Interrupt()) and ConRO:TarYou() then
